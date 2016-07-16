@@ -4,7 +4,7 @@
   google.charts.load("current", {packages:["timeline"]});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var container = document.getElementById('example2.1');
+    var container = document.getElementById('wedding_timeline');
     var chart = new google.visualization.Timeline(container);
     var dataTable = new google.visualization.DataTable();
 
@@ -18,13 +18,14 @@
     dataTable.addRows([
       //[ 'James in Vietnam', 'James Duncan', new Date(2016, 08, 25,09,30,0), new Date(2016, 10, 20,09,30,0) ],
       [ 'Option 1', 'Recommended Stay', new Date(2016, 09, 12),  new Date(2016, 09, 18) ],
-      [ 'Option 2', 'Minimum Stay', new Date(2016, 09, 13,12,0,0),  new Date(2016, 09, 17,12,0,0) ],
-      [ 'Wedding Plan1', 'Bus from HCMC to Chau Doc', new Date(2016, 09, 14,08,0,0),  new Date(2016, 09, 14,13,0,0) ],
-      [ 'Wedding Plan2', 'Pagoda Tour',  new Date(2016, 09, 15,10,0,0),  new Date(2016, 09, 15,16,0,0) ],
-      [ 'Wedding Plan3', 'Travel Chau Doc to Hometown',  new Date(2016, 09, 16,08,30,0),  new Date(2016, 09, 16,10,30,0) ],
-      [ 'Wedding Plan4', 'Ceremony',  new Date(2016, 09, 16,11,0,0),  new Date(2016, 09, 16,12,0,0) ],
-      [ 'Wedding Plan5', 'Restaurant',  new Date(2016, 09, 16,13,0,0),  new Date(2016, 09, 16,16,0,0) ],
-      [ 'Wedding Plan6', 'Travel from Hometown to HCMC',  new Date(2016, 09, 16,16,0,0),  new Date(2016, 09, 16,22,0,0) ]
+      [ 'Option 2', 'Min Stay', new Date(2016, 09, 13,12,0,0),  new Date(2016, 09, 17,12,0,0) ],
+      [ 'Item 1', 'Bus from HCMC to Chau Doc', new Date(2016, 09, 14,08,0,0),  new Date(2016, 09, 14,13,0,0) ],
+	  [ 'Item 2', 'Check in to resort - relax/explore Chau Doc', new Date(2016, 09, 14,13,0,0),  new Date(2016, 09, 14,22,0,0) ],
+      [ 'Item 3', 'Pagoda Tour',  new Date(2016, 09, 15,10,0,0),  new Date(2016, 09, 15,16,0,0) ],
+      [ 'Item 4', 'Travel from Chau Doc to Hometown',  new Date(2016, 09, 16,08,30,0),  new Date(2016, 09, 16,10,30,0) ],
+      [ 'Item 5', 'Wedding Ceremony',  new Date(2016, 09, 16,11,0,0),  new Date(2016, 09, 16,12,0,0) ],
+      [ 'Item 6', '"Reception" at Restaurant',  new Date(2016, 09, 16,13,0,0),  new Date(2016, 09, 16,16,0,0) ],
+      [ 'Item 7', 'Travel from Hometown to HCMC',  new Date(2016, 09, 16,16,0,0),  new Date(2016, 09, 16,22,0,0) ]
 	  
 	  ]);
 
@@ -32,4 +33,10 @@
   }
 </script>
 
-<div id="example2.1" style="height: 400px;"></div>
+<div id="wedding_timeline" style="height: 450px;"></div>
+
+<div>
+	<h2>Resort in Chau Doc: <a href="https://www.victoriahotels.asia/en/chau-doc">Victoria Chau Doc Hotel</a></h2>
+
+
+</div>
