@@ -1,5 +1,4 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
 <script type="text/javascript">
   google.charts.load("current", {packages:["timeline"]});
   google.charts.setOnLoadCallback(drawChart);
@@ -16,27 +15,111 @@
 	//new Date(0,0,0,12,0,0)
 	//new Date(yyyy,mm-1,d,24,30,0)
     dataTable.addRows([
-      //[ 'James in Vietnam', 'James Duncan', new Date(2016, 08, 25,09,30,0), new Date(2016, 10, 20,09,30,0) ],
+      [ 'James in Vietnam', 'James Duncan', new Date(2016, 08, 25,09,30,0), new Date(2016, 09, 20,09,30,0) ],
       [ 'Option 1', 'Recommended Stay', new Date(2016, 09, 12),  new Date(2016, 09, 18) ],
       [ 'Option 2', 'Min Stay', new Date(2016, 09, 13,12,0,0),  new Date(2016, 09, 17,12,0,0) ],
-      [ 'Item 1', 'Bus from HCMC to Chau Doc', new Date(2016, 09, 14,08,0,0),  new Date(2016, 09, 14,13,0,0) ],
-	  [ 'Item 2', 'Check in to resort - relax/explore Chau Doc', new Date(2016, 09, 14,13,0,0),  new Date(2016, 09, 14,22,0,0) ],
-      [ 'Item 3', 'Pagoda Tour',  new Date(2016, 09, 15,10,0,0),  new Date(2016, 09, 15,16,0,0) ],
-      [ 'Item 4', 'Travel from Chau Doc to Hometown',  new Date(2016, 09, 16,08,30,0),  new Date(2016, 09, 16,10,30,0) ],
-      [ 'Item 5', 'Wedding Ceremony',  new Date(2016, 09, 16,11,0,0),  new Date(2016, 09, 16,12,0,0) ],
-      [ 'Item 6', '"Reception" at Restaurant',  new Date(2016, 09, 16,13,0,0),  new Date(2016, 09, 16,16,0,0) ],
-      [ 'Item 7', 'Travel from Hometown to HCMC',  new Date(2016, 09, 16,16,0,0),  new Date(2016, 09, 16,22,0,0) ]
+      //[ '14th Oct', 'Bus from HCMC to Chau Doc', new Date(2016, 09, 14,08,0,0),  new Date(2016, 09, 14,13,0,0) ],
+	  //[ '14th Oct', 'Check in to resort - relax/explore Chau Doc', new Date(2016, 09, 14,13,0,0),  new Date(2016, 09, 14,22,0,0) ],
+      //[ '15th Oct', 'Pagoda Tour',  new Date(2016, 09, 15,10,0,0),  new Date(2016, 09, 15,16,0,0) ],
+      //[ 'Wedding Day - 16th Oct', 'Travel from Chau Doc to Hometown',  new Date(2016, 09, 16,08,30,0),  new Date(2016, 09, 16,10,30,0) ],
+      //[ 'Wedding Day - 16th Oct', 'Wedding Ceremony',  new Date(2016, 09, 16,11,0,0),  new Date(2016, 09, 16,12,0,0) ],
+      //[ 'Wedding Day - 16th Oct', '"Reception" at Restaurant',  new Date(2016, 09, 16,13,0,0),  new Date(2016, 09, 16,16,0,0) ],
+      //[ 'Wedding Day - 16th Oct', 'Travel from Hometown to HCMC',  new Date(2016, 09, 16,16,0,0),  new Date(2016, 09, 16,22,0,0) ]
 	  
 	  ]);
-
     chart.draw(dataTable);
+	
+	//draw 14h oct chart
+	var container2 = document.getElementById('wedding_timeline2');
+    var chart2 = new google.visualization.Timeline(container2);
+    var dataTable2 = new google.visualization.DataTable();
+
+    dataTable2.addColumn({ type: 'string', id: 'Term' });
+    dataTable2.addColumn({ type: 'string', id: 'Name' });
+    dataTable2.addColumn({ type: 'date', id: 'Start' });
+    dataTable2.addColumn({ type: 'date', id: 'End' });
+
+	//new Date(0,0,0,12,0,0)
+	//new Date(yyyy,mm-1,d,24,30,0)
+    dataTable2.addRows([
+      //[ 'James in Vietnam', 'James Duncan', new Date(2016, 08, 25,09,30,0), new Date(2016, 10, 20,09,30,0) ],
+      //[ 'Option 1', 'Recommended Stay', new Date(2016, 09, 12),  new Date(2016, 09, 18) ],
+      //[ 'Option 2', 'Min Stay', new Date(2016, 09, 13),  new Date(2016, 09, 17) ]
+      [ '14th Oct', 'Bus from HCMC to Chau Doc', new Date(2016, 09, 14,08,0,0),  new Date(2016, 09, 14,13,0,0) ],
+	  [ '14th Oct', 'Check in to resort - relax/explore Chau Doc', new Date(2016, 09, 14,13,0,0),  new Date(2016, 09, 14,22,0,0) ],
+      //[ '15th Oct', 'Pagoda Tour',  new Date(2016, 09, 15,10,0,0),  new Date(2016, 09, 15,16,0,0) ],
+      //[ 'Wedding Day - 16th Oct', 'Travel from Chau Doc to Hometown',  new Date(2016, 09, 16,08,30,0),  new Date(2016, 09, 16,10,30,0) ],
+      //[ 'Wedding Day - 16th Oct', 'Wedding Ceremony',  new Date(2016, 09, 16,11,0,0),  new Date(2016, 09, 16,12,0,0) ],
+      //[ 'Wedding Day - 16th Oct', '"Reception" at Restaurant',  new Date(2016, 09, 16,13,0,0),  new Date(2016, 09, 16,16,0,0) ],
+      //[ 'Wedding Day - 16th Oct', 'Travel from Hometown to HCMC',  new Date(2016, 09, 16,16,0,0),  new Date(2016, 09, 16,22,0,0) ]
+	  
+	  ]);
+    chart2.draw(dataTable2);
+	
+	//draw 15th oct chart
+	var container3 = document.getElementById('wedding_timeline3');
+    var chart3 = new google.visualization.Timeline(container3);
+    var dataTable3 = new google.visualization.DataTable();
+
+    dataTable3.addColumn({ type: 'string', id: 'Term' });
+    dataTable3.addColumn({ type: 'string', id: 'Name' });
+    dataTable3.addColumn({ type: 'date', id: 'Start' });
+    dataTable3.addColumn({ type: 'date', id: 'End' });
+
+	//new Date(0,0,0,12,0,0)
+	//new Date(yyyy,mm-1,d,24,30,0)
+    dataTable3.addRows([
+      //[ 'James in Vietnam', 'James Duncan', new Date(2016, 08, 25,09,30,0), new Date(2016, 10, 20,09,30,0) ],
+      //[ 'Option 1', 'Recommended Stay', new Date(2016, 09, 12),  new Date(2016, 09, 18) ],
+      //[ 'Option 2', 'Min Stay', new Date(2016, 09, 13),  new Date(2016, 09, 17) ]
+      //[ '14th Oct', 'Bus from HCMC to Chau Doc', new Date(2016, 09, 14,08,0,0),  new Date(2016, 09, 14,13,0,0) ],
+	  //[ '14th Oct', 'Check in to resort - relax/explore Chau Doc', new Date(2016, 09, 14,13,0,0),  new Date(2016, 09, 14,22,0,0) ],
+      [ '15th Oct', 'Free Time',  new Date(2016, 09, 15,08,0,0),  new Date(2016, 09, 15,10,0,0) ],
+      [ '15th Oct', 'Pagoda Tour',  new Date(2016, 09, 15,10,0,0),  new Date(2016, 09, 15,16,0,0) ],
+      [ '15th Oct', 'Free Time',  new Date(2016, 09, 15,16,0,0),  new Date(2016, 09, 15,22,0,0) ]
+      //[ 'Wedding Day - 16th Oct', 'Travel from Chau Doc to Hometown',  new Date(2016, 09, 16,08,30,0),  new Date(2016, 09, 16,10,30,0) ],
+      //[ 'Wedding Day - 16th Oct', 'Wedding Ceremony',  new Date(2016, 09, 16,11,0,0),  new Date(2016, 09, 16,12,0,0) ],
+      //[ 'Wedding Day - 16th Oct', '"Reception" at Restaurant',  new Date(2016, 09, 16,13,0,0),  new Date(2016, 09, 16,16,0,0) ],
+      //[ 'Wedding Day - 16th Oct', 'Travel from Hometown to HCMC',  new Date(2016, 09, 16,16,0,0),  new Date(2016, 09, 16,22,0,0) ]
+	  
+	  ]);
+    chart3.draw(dataTable3);
+	
+	//draw 16th oct chart
+	var container4 = document.getElementById('wedding_timeline4');
+    var chart4 = new google.visualization.Timeline(container4);
+    var dataTable4 = new google.visualization.DataTable();
+
+    dataTable4.addColumn({ type: 'string', id: 'Term' });
+    dataTable4.addColumn({ type: 'string', id: 'Name' });
+    dataTable4.addColumn({ type: 'date', id: 'Start' });
+    dataTable4.addColumn({ type: 'date', id: 'End' });
+
+	//new Date(0,0,0,12,0,0)
+	//new Date(yyyy,mm-1,d,24,30,0)
+    dataTable4.addRows([
+      //[ 'James in Vietnam', 'James Duncan', new Date(2016, 08, 25,09,30,0), new Date(2016, 10, 20,09,30,0) ],
+      //[ 'Option 1', 'Recommended Stay', new Date(2016, 09, 12),  new Date(2016, 09, 18) ],
+      //[ 'Option 2', 'Min Stay', new Date(2016, 09, 13),  new Date(2016, 09, 17) ]
+      //[ '14th Oct', 'Bus from HCMC to Chau Doc', new Date(2016, 09, 14,08,0,0),  new Date(2016, 09, 14,13,0,0) ],
+	  //[ '14th Oct', 'Check in to resort - relax/explore Chau Doc', new Date(2016, 09, 14,13,0,0),  new Date(2016, 09, 14,22,0,0) ],
+      //[ '15th Oct', 'Pagoda Tour',  new Date(2016, 09, 15,10,0,0),  new Date(2016, 09, 15,16,0,0) ]
+      [ 'Wedding Day - 16th Oct', 'Travel from Chau Doc to Hometown',  new Date(2016, 09, 16,08,30,0),  new Date(2016, 09, 16,10,30,0) ],
+      [ 'Wedding Day - 16th Oct', 'Wedding Ceremony',  new Date(2016, 09, 16,11,0,0),  new Date(2016, 09, 16,12,0,0) ],
+      [ 'Wedding Day - 16th Oct', '"Reception" at Restaurant',  new Date(2016, 09, 16,13,0,0),  new Date(2016, 09, 16,16,0,0) ],
+      [ 'Wedding Day - 16th Oct', 'Travel from Hometown to HCMC',  new Date(2016, 09, 16,16,0,0),  new Date(2016, 09, 16,22,0,0) ]
+	  
+	  ]);
+    chart4.draw(dataTable4);
   }
 </script>
 
-<div id="wedding_timeline" style="height: 450px;"></div>
+<h2>Click on an item for exact times</h2>
+<div id="wedding_timeline" style="height: 180px;"></div>
+<div id="wedding_timeline2" style="height: 100px;"></div>
+<div id="wedding_timeline3" style="height: 100px;"></div>
+<div id="wedding_timeline4" style="height: 100px;"></div>
 
 <div>
 	<h2>Resort in Chau Doc: <a href="https://www.victoriahotels.asia/en/chau-doc">Victoria Chau Doc Hotel</a></h2>
-
-
 </div>
