@@ -1,0 +1,35 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["timeline"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var container = document.getElementById('example2.1');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+
+    dataTable.addColumn({ type: 'string', id: 'Term' });
+    dataTable.addColumn({ type: 'string', id: 'Name' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+
+	//new Date(0,0,0,12,0,0)
+	//new Date(yyyy,mm-1,d,24,30,0)
+    dataTable.addRows([
+      //[ 'James in Vietnam', 'James Duncan', new Date(2016, 08, 25,09,30,0), new Date(2016, 10, 20,09,30,0) ],
+      [ 'Option 1', 'Recommended Stay', new Date(2016, 09, 12),  new Date(2016, 09, 18) ],
+      [ 'Option 2', 'Minimum Stay', new Date(2016, 09, 13,12,0,0),  new Date(2016, 09, 17,12,0,0) ],
+      [ 'Wedding Plan1', 'Bus from HCMC to Chau Doc', new Date(2016, 09, 14,08,0,0),  new Date(2016, 09, 14,13,0,0) ],
+      [ 'Wedding Plan2', 'Pagoda Tour',  new Date(2016, 09, 15,10,0,0),  new Date(2016, 09, 15,16,0,0) ],
+      [ 'Wedding Plan3', 'Travel Chau Doc to Hometown',  new Date(2016, 09, 16,08,30,0),  new Date(2016, 09, 16,10,30,0) ],
+      [ 'Wedding Plan4', 'Ceremony',  new Date(2016, 09, 16,11,0,0),  new Date(2016, 09, 16,12,0,0) ],
+      [ 'Wedding Plan5', 'Restaurant',  new Date(2016, 09, 16,13,0,0),  new Date(2016, 09, 16,16,0,0) ],
+      [ 'Wedding Plan6', 'Travel from Hometown to HCMC',  new Date(2016, 09, 16,16,0,0),  new Date(2016, 09, 16,22,0,0) ]
+	  
+	  ]);
+
+    chart.draw(dataTable);
+  }
+</script>
+
+<div id="example2.1" style="height: 400px;"></div>
